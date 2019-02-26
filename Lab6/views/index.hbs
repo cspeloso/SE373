@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index Page</title>
+</head>
+<body>
+    <center>
+
+        <h1 style="color:blue;">Person Creation Form - Mongoose</h1>
+        
+        <form action="/lab6personCreation" method="POST">
+            <input id="fName" name="fName" type="text" placeholder="First Name" style="text-align:center;"><br><br>
+            <input id="lName" name="lName" type="text" placeholder="Last Name" style="text-align:center;"><br><br>
+            <input id="department" name="department" type="text" placeholder="Department" style="text-align:center;"><br><br>
+            <input id="startDate" name="startDate" type="date" placeholder="Start Date" style="text-align:center;font-family:Arial, Helvetica, sans-serif;"><br><br>
+            <input id="jobTitle" name="jobTitle" type="text" placeholder="Job Title" style="text-align:center;"><br><br>
+            <input id="salary" name="salary" type="text" placeholder="Salary" style="text-align:center;"><br><br>
+            <input type="submit" value="submit person" style="cursor:pointer">
+        </form>
+
+        <br>
+
+        <a href="/view" style="color:blue;font-family:Arial, Helvetica, sans-serif;font-size:18px;text-decoration:none;">View</a><br><br>
+        <!--<a href="/update" style="color:blue;font-family:Arial, Helvetica, sans-serif;font-size:18px;text-decoration:none;">Update</a><br><br>-->
+        <a href="/delete" style="color:blue;font-family:Arial, Helvetica, sans-serif;font-size:18px;text-decoration:none;">Delete</a><br><br>
+
+    </center>
+</body>
+</html>

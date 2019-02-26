@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/" style="color:red;text-decoration:none;">Back</a>
+
+
+    <center>
+
+        <h1 style="color:blue;">Update Page</h1>
+
+
+        <form action="/updateSubmit" method="POST">
+
+
+        <div style="float:left;width:45%;border:5px solid black;">
+
+            <h2 style="color:blue;">ORIGINAL</h2><br>
+
+            <input id="firstName2" name="firstName2" type="text" value="{{firstName2}}" required placeholder="First Name" readonly="readonly" style="text-align:center;"><br><br><br>
+            <input id="lastName2" name="lastName2" type="text" value="{{lastName2}}" required placeholder="Last Name"  readonly="readonly" style="text-align:center;"><br><br><br>
+            <input id="department2" name="department2" type="text" value="{{department2}}" required placeholder="department" readonly="readonly"  style="text-align:center;"><br><br><br>
+            <input id="startDate2" name="startDate2" type="date" value="{{startDate2}}" required placeholder="Job Title"  readonly="readonly" style="text-align:center;"><br><br><br>
+            <input id="jobTitle2" name="jobTitle2" type="text" value="{{jobTitle2}}" required placeholder="Job Title"  readonly="readonly" style="text-align:center;"><br><br><br>
+            <input id="salary2" name="salary2" type="text" value="{{salary2}}" required placeholder="Salary" readonly="readonly" style="text-align:center;"><br><br><br>
+
+        </div>
+
+        <div style="float:right;width:45%;border:5px solid black;">
+
+            <h2 style="color:blue;">NEW</h2><br>
+
+            <input id="firstName" name="firstName" type="text" value="{{firstName}}" required placeholder="First Name" style="text-align:center;"><br><br><br>
+            <input id="lastName" name="lastName" type="text" value="{{lastName}}" required placeholder="Last Name" style="text-align:center;"><br><br><br>
+            <input id="department" name="department" type="text" value="{{department}}" required placeholder="department" style="text-align:center;"><br><br><br>
+            <input id="startDate" name="startDate" type="date" value="{{startDate}}" required placeholder="Job Title" style="text-align:center;"><br><br><br>
+            <input id="jobTitle" name="jobTitle" type="text" value="{{jobTitle}}" required placeholder="Job Title" style="text-align:center;"><br><br><br>
+            <input id="salary" name="salary" type="text" value="{{salary}}" required placeholder="Salary" style="text-align:center;"><br><br><br>
+
+            <input type="submit" value="Update Record" style="cursor:pointer;margin-bottom:15px;">
+
+        </div>
+                
+                
+
+                
+
+        </form>
+    </center>
+    
+</body>
+</html>
