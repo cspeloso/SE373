@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Expense</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body>
+    <a class="backBtn" href="/admincp">Back</a>
+
+    <center>
+
+        <h1 style="color:blue;">Update Income</h1>
+
+        <form action="updateIncomeSubmit" method="POST">
+
+            <div style="float:left;width:45%;border:5px solid black;">
+
+                <h2 style="color:blue;">ORIGINAL</h2><br>
+
+                <input id="title2" name="title2" type="text" value="{{title}}" required placeholder="Title" readonly="readonly" style="text-align:center;"><br><br><br>
+                <input id="amount2" name="amount2" type="text" value="{{amount}}" required placeholder="Amount"  readonly="readonly" style="text-align:center;"><br><br><br>
+                <input id="interval2" name="interval2" type="text" value="{{interval}}" required placeholder="Interval" readonly="readonly"  style="text-align:center;"><br><br><br>
+                <input id="notes2" name="notes2" type="text" value="{{notes}}" required placeholder="Notes"  readonly="readonly" style="text-align:center;"><br><br><br>
+                <input id="date2" name="date2" type="text" value="{{date}}" required placeholder="Date"  readonly="readonly" style="text-align:center;"><br><br><br>
+
+            </div>
+
+            <div style="float:right;width:45%;border:5px solid black;">
+
+                <h2 style="color:blue;">NEW</h2><br>
+
+                <input id="title" name="title" type="text" value="{{title}}" required placeholder="Title" style="text-align:center;"><br><br><br>
+                <input id="amount" name="amount" type="text" value="{{amount}}" required placeholder="Amount" style="text-align:center;"><br><br><br>
+                <input id="interval" name="interval" type="text" value="{{interval}}" required placeholder="Interval" style="text-align:center;"><br><br><br>
+                <input id="notes" name="notes" type="text" value="{{notes}}" placeholder="Notes" style="text-align:center;"><br><br><br>
+                <input id="date" name="date" type="date" value="{{date}}" required placeholder="Date" style="text-align:center;"><br><br><br>
+
+                <input type="submit" value="Update Record" style="cursor:pointer;margin-bottom:15px;">
+
+            </div>
+
+        </form>
+
+    </center>
+
+</body>
+</html>

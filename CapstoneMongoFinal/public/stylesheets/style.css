@@ -1,0 +1,89 @@
+.budgetBuddyHeader{
+    color:#6585bb !important;
+    font-family:impact,arial;
+    font-style:italic;
+    text-align:center;
+}
+
+.budgetBuddyHeader:hover{
+    color: #82a2db !important;
+    font-family:impact,arial;
+    font-style:italic;
+    text-align:center;
+}
+
+.backBtn:link{
+    color:white;
+    text-decoration:none;
+    background-color:red;
+    padding:5px;
+}
+
+.backBtn:hover{
+    background-color:orange;
+}
+
+.backBtn:visited{
+    color:white;
+    text-decoration:none;
+}
+
+h3{
+    font-family:"Segoe Script","Brush Script Std",arial;
+    color:black;
+    text-align:center;
+    width:50%;
+}
+
+.headerBtn:link{
+    text-decoration:none;
+    border:1px solid black;
+    padding:0px 75px 0px 75px;
+    font-family:impact,arial;
+    font-size:24px;
+    background:#6585bb;
+    color:black;
+    width:25%;
+}
+
+.headerBtn:visited{
+    color:black;
+}
+
+.headerBtn:hover{
+    color:white;
+}
+
+.adminCPbtns{
+    color:blue;
+    text-decoration:none;
+    font-size:24px;
+}
+
+.adminCPbtn{
+    color:blue;
+    text-decoration:none;
+    
+}
+
+.disabledBtn{
+    color:gray;
+    cursor:not-allowed;
+    opacity:0.5;
+    text-decoration:none;
+    pointer-events:none;
+}
+
+.leftUser{
+    /*border:1px solid black;*/
+    width:30%;
+    float:left;
+    margin-left:20%;
+}
+
+.rightUser{
+    /*border:1px solid black;*/
+    width:30%;
+    float:right;
+    margin-right:20%;
+}
