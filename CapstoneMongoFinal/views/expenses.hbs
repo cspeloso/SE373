@@ -16,53 +16,56 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <center>
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/">Overview</a>
+            <li class="nav-item headerBtns">
+                <a class="nav-link  headerBtnsActive" href="/">Overview</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/income">Income</a>
+            <li class="nav-item headerBtns">
+                <a class="nav-link  headerBtnsActive" href="/income">Income</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/expenses" style="color:black;">Expenses</a>
+            <li class="nav-item headerBtns">
+                <a class="nav-link  headerBtnsActive" href="/expenses" style="color:black;">Expenses</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/goals">Goals</a>
+            <li class="nav-item headerBtns">
+                <a class="nav-link  headerBtnsActive" href="/goals">Goals</a>
             </li>
             </ul>
-            
+            </center>
         </div>
     </nav>
 
 
 
-    <div class="leftUser">
-        <center>
-            <h3>Expenses</h3>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <center>
+                <h3>Expenses</h3>
 
-            <form action="/ExpensesSubmitFunc" method="POST">
-            
-                <input id="title" name="title" type="text" placeholder="Title" style="text-align:center;"><br><br>
-                <input id="amount" name="amount" type="text" placeholder="Amount" style="text-align:center;"><br><br>
-                <input id="interval" name="interval" type="text" placeholder="Interval" style="text-align:center;"><br><br>
-                <input id="notes" name="notes" type="text" placeholder="Notes" style="text-align:center;"><br><br>
-                <input id="date" name="date" type="date" style="text-align:center;"><br><br>
-            
-                <input type="submit" value="Submit Income" style="cursor:pointer;">
+                <form action="/ExpensesSubmitFunc" method="POST">
+                
+                    <input id="title" name="title" type="text" required="required" placeholder="Title" style="text-align:center;"><br><br>
+                    <input id="amount" name="amount" type="text" required="required" placeholder="Amount" style="text-align:center;"><br><br>
+                    <input id="interval" name="interval" type="text" required="required" placeholder="Interval" style="text-align:center;"><br><br>
+                    <input id="notes" name="notes" type="text" placeholder="Notes" style="text-align:center;"><br><br>
+                    <input id="date" name="date" type="date" required="required" style="text-align:center;"><br><br>
+                
+                    <input type="submit" value="Submit Income" style="cursor:pointer;">
 
-            </form>
-        </center>
-    </div>
+                </form>
+            </center>
+        </div>
 
-    <div class="rightUser">
-        <center>
-            <h3>Current Expenses</h3>
+        <div class="col-sm-12 col-md-12 col-lg-6 rightUser">
+            <center>
+                <h3>Current Expenses</h3>
 
-            <ul style="list-style-type:none;">{{{ViewExpensesFuncClient data}}}</ul>
+                <ul style="list-style-type:none;">{{{ViewExpensesFuncClient data}}}</ul>
 
 
 
-        </center>
+            </center>
+        </div>
     </div>
 
         

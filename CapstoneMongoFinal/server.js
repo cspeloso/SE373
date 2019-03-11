@@ -152,19 +152,20 @@ app.post('/IncomeSubmitFunc', (req,res)=>{
         for(let i = 0; i< data.length; i++)
         {
             expensesTotal += data[i].amount;
-        } 
+        }        
 
-        Income.find({}, function(err,data){
-            for(let i = 0; i < data.length; i++)
+        Goals.find({}, function(err,data){
+            for(let i = 0; i< data.length; i++)
             {
-                incomeTotal += data[i].amount;
-            }        
+                goalsTotal += data[i].amount;
+            }
 
-            Goals.find({}, function(err,data){
-                for(let i = 0; i< data.length; i++)
-                {
-                    goalsTotal += data[i].amount;
-                }
+
+                Income.find({}, function(err,data){
+                    for(let i = 0; i < data.length; i++)
+                    {
+                        incomeTotal += data[i].amount;
+                    }        
         
                 res.render('index.hbs',{
                     incomeTotal:incomeTotal,
@@ -198,19 +199,19 @@ app.post('/ExpensesSubmitFunc', (req,res)=>{
         for(let i = 0; i < data.length; i++)
         {
             incomeTotal += data[i].amount;
-        }
+        }       
 
-        Expenses.find({}, function(err,data){
+        Goals.find({}, function(err,data){
             for(let i = 0; i< data.length; i++)
             {
-                expensesTotal += data[i].amount;
+                goalsTotal += data[i].amount;
             }
 
-            Goals.find({}, function(err,data){
-                for(let i = 0; i< data.length; i++)
-                {
-                    goalsTotal += data[i].amount;
-                }
+                Expenses.find({}, function(err,data){
+                    for(let i = 0; i< data.length; i++)
+                    {
+                        expensesTotal += data[i].amount;
+                    }
         
                 res.render('index.hbs',{
                     incomeTotal:incomeTotal,
@@ -292,7 +293,11 @@ hbs.registerHelper('ViewIncomeFuncClient', (incomeData)=>{
         msg += `<li>${incomeData[i].title}</li>`
         msg += `<li>${incomeData[i].amount}</li>`
         msg += `<li>${incomeData[i].interval}</li>`
-        msg += `<li>${incomeData[i].notes}</li>`
+
+        if(incomeData[i].notes != ""){
+            msg += `<li>${incomeData[i].notes}</li>`
+        }
+
         msg += `<li>${incomeData[i].date}</li>`
         msg += `<br><br>`
     }
@@ -324,7 +329,11 @@ hbs.registerHelper('ViewExpensesFuncClient', (expensesData)=>{
         msg += `<li>${expensesData[i].title}</li>`
         msg += `<li>${expensesData[i].amount}</li>`
         msg += `<li>${expensesData[i].interval}</li>`
-        msg += `<li>${expensesData[i].notes}</li>`
+
+        if(expensesData[i].notes != ""){
+            msg += `<li>${expensesData[i].notes}</li>`
+        }
+
         msg += `<li>${expensesData[i].date}</li>`
          msg += `<br><br>`
     }
@@ -356,7 +365,7 @@ hbs.registerHelper('ViewGoalsFuncClient', (goalsData)=>{
     for(let i = 0; i < goalsData.length; i++){
         msg += `<li>${goalsData[i].title}</li>`
         msg += `<li>${goalsData[i].amount}</li>`
-        msg += `<li>${goalsData[i].interval}</li>`
+        msg += `<li>${goalsData[i].priority}</li>`
         msg += `<li>${goalsData[i].notes}</li>`
         msg += `<li>${goalsData[i].date}</li>`
         msg += `<br><br>`
